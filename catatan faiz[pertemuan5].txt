@@ -1,0 +1,43 @@
+<form_kecamatan>              
+<div class="box-body">
+                <form action="<?php echo $action; ?>" method="post">
+                  <div class="input-group">
+                    <span class="input-group-addon" ><i class="fa fa-map-marker"></i></span>
+                    <input type="text" name="nama_kecamatan" value="<?php echo $nama_kecamatan; ?>"class="form-control" placeholder="Nama kecamatan">
+                    <input type="hidden" name="id_kecamatan" value="<?php echo $id_kecamatan; ?>">
+                  </div>
+                  <div class="box-footer">
+                    <input type="submit" class="btn btn-danger" value="<?php echo $button; ?>">
+                    <a href="<?php echo base_url(); ?>index.php/kecamatan" class="btn btn-default">Kembali</a>
+                    </div>
+                  </form>
+                </div>
+
+
+<kecamatan.php di controller>
+		$data['button'] ="Simpan";
+		$data['id_kecamatan'] = '';
+		$data['action'] = site_url('kecamatan/tambah_kecamatan');
+
+<kecamatan.php di view>
+                            <a href="<?php echo site_url('kecamatan/form_edit_kecamatan/'.$kecamatan[$i]->id_kecamatan); ?>" class = "btn btn-warning">
+                              <i class = "fa fa-pencil"></i>
+
+<kecamatan.php di controller>
+tambah function edit_form_kecamatan
+tambah juga $data nama_kecamatan
+
+
+$Kecamatan = $this->Kecamatan_Model->select_by_id_kecamatan($id);
+
+file controller kecamatan.php
+	public function select_by_id_kecamatan($id)
+	{
+		$this->db->where('id_kecamatan', $id);
+		$this->db->get('kecamatan')->row(); #untuk mengembalikan 1 nilai
+	}
+
+file controller kecamatan.php
+
+
+

@@ -1,0 +1,12 @@
+buat tabel kecamatan, user
+isi tabel kecamatan, user
+tabel kecamatan, id AI
+tabel user, id AI, pass md5
+
+faiztamvan1
+
+di folder controller, buat file Kecamatan, User, Waktu
+di folder views, buat folder kecamatan, waktu, user, pindahkan file kesana
+
+model, buat file baru Kecamatan_Model $this->db memanggil database
+

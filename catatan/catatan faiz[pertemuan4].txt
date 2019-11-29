@@ -1,0 +1,37 @@
+tambah button tambahdata
+
+folder controller, buat function form_kecamatan, var.isi dan judul. this->load view (kecamatan/form_kecamatan)
+
+di body, ketik  <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                <input type="text" class="form-control" placeholder="Nama kecamatan">
+
+
+<div class="box-body">
+                <form action="<?php echo base_url(); ?>index.php/kecamatan/tambah_kecamatan" method="post">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                    <input type="text" name="nama_kecamatan" class="form-control" placeholder="Nama kecamatan">
+                  </div>
+                  <div class="box-footer">
+                    <input type="submit" class="btn btn-danger" value="Simpan">
+                    <a href="<?php echo base_url(); ?>index.php/kecamatan" class="btn btn-default">Kembali</a>
+                    </div>
+                  </form>
+                </div>
+
+
+folder controller, buat fungsi baru tambah_kecamatan  echo $this->input->post('nama_kecamatan');
+
+folder model, kecamatan_model, tambh fungsi baru
+
+folder controller, kecamatan, buat fungsi construct untuk dinamis
+
+=> = vaule
+
+folder controller, fungsi tambah_kecmatan di modifikasi, 
+
+buat alert
+
+folder kecamatan model, buat hapus_kecamatan
+
